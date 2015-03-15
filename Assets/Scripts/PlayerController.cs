@@ -4,10 +4,20 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
 	public float Speed;
+	public float MinimumX;
+	public float MaximumX;
 
-	void Update ()
+	private Rigidbody rigidbody;
+
+	void Start()
+	{
+		rigidbody = GetComponent<Rigidbody>();
+	}
+
+	void Update()
 	{
 		var moveHorizontal = Input.GetAxis("Horizontal");
-		GetComponent<Rigidbody>().velocity = new Vector3(moveHorizontal, 0, 0) * Speed;
+		rigidbody.transform.position = new Vector3(Mathf.Clamp(rigidbody.transform.position.x + (moveHorizontal * Speed), MinimumX, MaximumX), 0, 0);
+
 	}
 }
