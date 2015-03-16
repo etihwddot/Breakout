@@ -245,8 +245,8 @@ GameObject:
   - 65: {fileID: 889301140}
   - 65: {fileID: 889301145}
   - 23: {fileID: 889301139}
-  - 114: {fileID: 889301144}
   - 54: {fileID: 889301143}
+  - 114: {fileID: 889301144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd53b27b025d974983b21994d58afa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: .5
+  Speed: 10
   MinimumX: -9
   MaximumX: 9
 --- !u!65 &889301145

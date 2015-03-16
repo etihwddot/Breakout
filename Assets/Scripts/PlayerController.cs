@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 	void Update()
 	{
 		var moveHorizontal = Input.GetAxis("Horizontal");
-		rigidbody.transform.position = new Vector3(Mathf.Clamp(rigidbody.transform.position.x + (moveHorizontal * Speed), MinimumX, MaximumX), 0, 0);
+		rigidbody.transform.position = new Vector3(Mathf.Clamp(rigidbody.transform.position.x + (moveHorizontal * Time.deltaTime * Speed), MinimumX, MaximumX), 0, 0);
 
 	}
 
