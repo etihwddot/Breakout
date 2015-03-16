@@ -20,4 +20,12 @@ public class PlayerController : MonoBehaviour
 		rigidbody.transform.position = new Vector3(Mathf.Clamp(rigidbody.transform.position.x + (moveHorizontal * Speed), MinimumX, MaximumX), 0, 0);
 
 	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag != "Ball")
+			return;
+
+		Debug.Log("Ball collision.");
+	}
 }
