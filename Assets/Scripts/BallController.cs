@@ -3,8 +3,19 @@ using System.Collections;
 
 public class BallController : MonoBehaviour
 {
-	void Start ()
+	private bool isLaunched;
+
+	void Update()
 	{
-		GetComponent<Rigidbody>().velocity = new Vector3 (4, 0, 15);
+		if (!isLaunched && Input.GetKeyDown (KeyCode.Space))
+		{
+			GetComponent<Rigidbody>().velocity = new Vector3(4, 0, 12);
+		}
+	}
+
+
+	void OnDestroy()
+	{
+		GameManager.Instance.ResetBall ();
 	}
 }
