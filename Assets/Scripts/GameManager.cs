@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
 	public void ResetBall()
 	{
-		Instantiate(BallPrefab, BallSpawnLocation.position, Quaternion.identity);
+		GameObject ball = (GameObject) Instantiate(BallPrefab, BallSpawnLocation.position, Quaternion.identity);
+		ball.transform.SetParent(BallSpawnLocation);
 	}
 }
