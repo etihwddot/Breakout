@@ -14,10 +14,4 @@ public class BallController : MonoBehaviour
 			isLaunched = true;
 		}
 	}
-
-
-	void OnDestroy()
-	{
-		GameManager.Instance.ResetBall ();
-	}
 }
