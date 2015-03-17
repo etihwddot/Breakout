@@ -173,6 +173,7 @@ GameObject:
   - 65: {fileID: 289836377}
   - 23: {fileID: 289836376}
   - 54: {fileID: 289836375}
+  - 114: {fileID: 289836381}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -229,7 +230,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.10000002, y: 1.10000002, z: 1.10000002}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &289836378
 BoxCollider:
@@ -257,11 +258,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289836374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .25, z: 0}
+  m_LocalPosition: {x: 1.70000005, y: .25, z: 8}
   m_LocalScale: {x: 2, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &289836381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289836374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3173ecee0eedabb49bb39de3e9f3eacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 1
 --- !u!1 &653011422
 GameObject:
   m_ObjectHideFlags: 0
