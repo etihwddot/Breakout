@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
 		HitPoints--;
 
 		if (HitPoints == 0)
-			Destroy(gameObject);
+		{
+			Destroy (gameObject);
+			GameManager.Instance.DecrementEnemyCount();
+		}
 	}
 }
